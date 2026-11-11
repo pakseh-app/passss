@@ -12,7 +12,8 @@ Ezy layout · HTML
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <style>
 *{box-sizing:border-box}
-body{margin:0;font:14px/1.4 Nunito,system-ui,sans-serif;color:#334155;background:#dde3ec;height:100vh;display:grid;grid-template-columns:430px 1fr;overflow:hidden}
+body{margin:0;font:14px/1.4 Nunito,system-ui,sans-serif;color:#334155;background:#dde3ec;height:100vh;display:grid;grid-template-columns:430px minmax(0,1fr);overflow:hidden}
+aside,main{min-width:0}
 aside{background:#fbfdff;display:flex;flex-direction:column;min-height:0;border-right:2px solid #cfd8e3}
 .head{display:flex;align-items:center;gap:14px;padding:18px 20px;border-bottom:1px solid #e8eef5}
 .logo{width:56px;height:56px;border-radius:18px;background:#fff;display:grid;place-items:center;font:italic 900 34px Georgia,serif;color:#111;box-shadow:0 4px 0 #dbe3ec,0 8px 14px rgba(100,116,139,.25)}
@@ -62,7 +63,7 @@ main{overflow:auto;padding:16px 22px;display:flex;flex-direction:column;align-it
 #info{position:sticky;top:0;z-index:2;background:#fff;border-radius:999px;padding:6px 16px;font-weight:800;font-size:12px;color:#64748b;box-shadow:0 3px 0 #cbd5e1}
 #pages{display:flex;flex-direction:column;gap:18px}
 canvas{max-width:100%;height:auto!important;background:#fff;box-shadow:0 10px 30px rgba(51,65,85,.25);touch-action:none;cursor:grab}
-@media(max-width:860px){body{grid-template-columns:1fr;grid-template-rows:auto 1fr;height:auto;overflow:auto}aside{border:0}.scroll{max-height:none}main{min-height:60vh}}
+@media(max-width:900px){body{display:block;height:auto;overflow:auto}aside{display:block;border:0}.scroll{overflow:visible;padding:14px}.head{padding:14px}.ttl b{font-size:20px}.ttl span{font-size:18px}.big{font-size:17px;padding:15px}.grid{gap:8px}.b3{font-size:13px;padding:10px 2px}main{overflow:visible;padding:12px;min-height:60vh;align-items:stretch}#pages{align-items:center}.foot{position:sticky;bottom:0;z-index:5}}
 </style>
 </head>
 <body>
